@@ -27,14 +27,14 @@ services:
     environment:
       - EULA=TRUE
       - TYPE=SPIGOT
-      - VERSION="1.16.5"
+      - VERSION=1.16.5
 
       - GUI=false
       # NOTE: Estas variables deben ser unicas para cada servidor.
-      - SERVER_NAME="survival_server"
+      - SERVER_NAME=survival_server
       - SERVER_PORT=25580
       
-      - MOTD="Survival server 1.16.5"
+      - MOTD=Survival server 1.16.5
       - DIFFICULTY=normal
       - MODE=survival
       - PVP=true
@@ -50,14 +50,14 @@ services:
     environment:
       - EULA=TRUE
       - TYPE=SPIGOT
-      - VERSION="1.8.8"
+      - VERSION=1.8.8
 
       - GUI=false
       # NOTE: Estas variables deben ser unicas para cada servidor.
-      - SERVER_NAME="pvp_server"
+      - SERVER_NAME=pvp_server
       - SERVER_PORT=25590
       
-      - MOTD="Servidor pvp 1.8.9"
+      - MOTD=Servidor pvp 1.8.9
       - DIFFICULTY=peaceful
       - MODE=survival
       - PVP=true
