@@ -21,7 +21,7 @@ services:
     container_name: mc-network-survival
     image: itzg/minecraft-server
     tty: true
-    stdin_opne: true
+    stdin_open: true
     ports:
       - "25580:25580"
     environment:
@@ -44,7 +44,7 @@ services:
     container_name: mc-network-pvp
     image: itzg/minecraft-server
     tty: true
-    stdin_opne: true
+    stdin_open: true
     ports:
       - "25590:25590"
     environment:
