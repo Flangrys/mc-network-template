@@ -10,10 +10,10 @@ services:
     ports:
       - "25565:25565"
     environment:
-      - EULA: TRUE
-      - CUSTOM_SERVER: "http://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar"
-      - CUSTOM_EXEC_JAR: "-jar BungeeCord.jar"
-      - MOTD: "An awsome minecraft server."
+      - EULA=TRUE
+      - CUSTOM_SERVER="http://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar"
+      - CUSTOM_EXEC_JAR="-jar BungeeCord.jar"
+      - MOTD="An awsome minecraft server."
     volumes:
       - ./mc-data:/data
 
@@ -25,20 +25,20 @@ services:
     ports:
       - "25580:25580"
     environment:
-      - EULA: TRUE
-      - TYPE: SPIGOT
-      - VERSION: "1.16.5"
+      - EULA=TRUE
+      - TYPE=SPIGOT
+      - VERSION="1.16.5"
 
-      - GUI: false
+      - GUI=false
       # NOTE: Estas variables deben ser unicas para cada servidor.
-      - SERVER_NAME: "survival_server"
-      - SERVER_PORT: 25580
+      - SERVER_NAME="survival_server"
+      - SERVER_PORT=25580
       
-      - MOTD: "Survival server 1.16.5"
-      - DIFFICULTY: normal
-      - MODE: survival
-      - PVP: true
-      - ONLINE_MODE: false
+      - MOTD="Survival server 1.16.5"
+      - DIFFICULTY=normal
+      - MODE=survival
+      - PVP=true
+      - ONLINE_MODE=false
 
   pvp_service:
     container_name: mc-network-pvp
@@ -46,19 +46,19 @@ services:
     tty: true
     stdin_opne: true
     ports:
-      - "25580:25580"
+      - "25590:25590"
     environment:
-      - EULA: TRUE
-      - TYPE: SPIGOT
-      - VERSION: "1.8.8"
+      - EULA=TRUE
+      - TYPE=SPIGOT
+      - VERSION="1.8.8"
 
-      - GUI: false
+      - GUI=false
       # NOTE: Estas variables deben ser unicas para cada servidor.
-      - SERVER_NAME: "pvp_server"
-      - SERVER_PORT: 25590
+      - SERVER_NAME="pvp_server"
+      - SERVER_PORT=25590
       
-      - MOTD: "Servidor pvp 1.8.9"
-      - DIFFICULTY: peaceful
-      - MODE: survival
-      - PVP: true
-      - ONLINE_MODE: false
+      - MOTD="Servidor pvp 1.8.9"
+      - DIFFICULTY=peaceful
+      - MODE=survival
+      - PVP=true
+      - ONLINE_MODE=false
